@@ -1,8 +1,8 @@
 settings:
   title: 'Status Page'
   url: 'https://status.huangmenji.cc' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  logo: 1_w.png # image in ./public/ folder
+  daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
@@ -16,9 +16,63 @@ settings:
 
 monitors:
   - id: huangmenji.love # unique identifier
-    name: huangmenji.love
-    description: 'You write code. They handle the rest.' # default=empty
+    name: 黄焖鸡的日记huangmenji.love
+    description: '黄焖鸡的日记' # default=empty
     url: 'http://huangmenji.love/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: 404bc.cc # unique identifier
+    name: 404bc.cc
+    description: '404bc.cc' # default=empty
+    url: 'https://404bc.cc/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: BcUnraid # unique identifier
+    name: BcUnraid
+    description: 'AIO Server' # default=empty
+    url: 'https://bccccc.cc:33443/login' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: BT-Aliyun # unique identifier
+    name: BT-Aliyun
+    description: 'BT-Aliyun' # default=empty
+    url: 'https://39.106.134.156:11401/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: PeiQi-Aliyun # unique identifier
+    name: PeiQi-Aliyun
+    description: 'PeiQi-Aliyun' # default=empty
+    url: 'http://39.106.134.156:32769/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: Onedom # unique identifier
+    name: Onedom
+    description: 'Onedom' # default=empty
+    url: 'https://onedom.com/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: Onedom-OA # unique identifier
+    name: Onedom-OA
+    description: 'Onedom-OA' # default=empty
+    url: 'http://wxtest.onedom.com/user/login?redirect=%2F' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
